@@ -55,12 +55,12 @@ public class PuzzleTest extends TestCase {
         assertTrue(p.isComplete());
 
         ArrayList<String[]> incorrect4x4 = new ArrayList<String[]>();
-        valid4x4.add("1,2,3,4".split(","));
-        valid4x4.add("3,4,1,2".split(","));
-        valid4x4.add("2,3,3,1".split(","));
-        valid4x4.add("4,1,2,4".split(","));
+        incorrect4x4.add("2,2,3,4".split(","));
+        incorrect4x4.add("3,4,1,2".split(","));
+        incorrect4x4.add("2,3,3,1".split(","));
+        incorrect4x4.add("4,1,2,4".split(","));
 
-        Puzzle p2 = new Puzzle(valid4x4);
-        assertFalse(p.isComplete());
+        Puzzle p2 = new Puzzle(incorrect4x4);
+        assertFalse(p2.isComplete());
     }
 }
